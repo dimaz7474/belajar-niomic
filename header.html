@@ -44,6 +44,35 @@
     }
     label {
       cursor: pointer;
+         font-weight: bold;
+    }
+        .form-container {
+      background: white;
+      padding: 20px;
+      max-width: 400px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+   
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
     }
     </style>
 </head>
@@ -107,5 +136,30 @@
     <option value="medan">Medan</option>
     <option value="denpasar">Denpasar</option>
   </select>
+     <div class="form-container">
+    <h2>Formulir Pendaftaran</h2>
+    <form action="proses.php" method="post">
+      <label for="nama">Nama Lengkap</label>
+      <input type="text" id="nama" name="nama" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="telepon">No. Telepon</label>
+      <input type="tel" id="telepon" name="telepon">
+
+      <label for="jenis_kelamin">Jenis Kelamin</label>
+      <select id="jenis_kelamin" name="jenis_kelamin">
+        <option value="">-- Pilih --</option>
+        <option value="laki">Laki-laki</option>
+        <option value="perempuan">Perempuan</option>
+      </select>
+
+      <label for="pesan">Pesan / Keterangan</label>
+      <textarea id="pesan" name="pesan" rows="4"></textarea>
+
+      <button type="submit">Kirim</button>
+    </form>
+  </div>
 </body>
 </html>
